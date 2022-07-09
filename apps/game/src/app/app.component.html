@@ -1,0 +1,12 @@
+<!-- <my-org-nx-welcome></my-org-nx-welcome> -->
+
+<h1>Todos</h1>
+
+<ul>
+  <li *ngFor="let todo of todos" class="todo">
+    {{ todo.id }} &nbsp; - &nbsp; {{ todo.title }} &nbsp; &nbsp;
+    <button (click)="deleteTodo(todo)">X</button>
+  </li>
+</ul>
+
+<button id="add-todo" (click)="addTodos()">Add todo</button>
