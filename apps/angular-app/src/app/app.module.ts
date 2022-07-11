@@ -10,6 +10,7 @@ import { NxWelcomeComponent } from './nx-welcome.component';
 // import { RouterModule } from '@angular/router';
 import { PocComponent } from './poc/poc.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AgGridModule } from 'ag-grid-angular';
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent, PocComponent],
@@ -20,7 +21,8 @@ import { AppRoutingModule } from './app-routing.module';
     ReactiveFormsModule,
     FormlyModule.forRoot({
       types: [{ name: 'input', component: FormlyFieldInput }],
-    })
+    }),
+    AgGridModule
   ],
   providers: [],
   bootstrap: [AppComponent],
