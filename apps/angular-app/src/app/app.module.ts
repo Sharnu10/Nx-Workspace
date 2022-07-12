@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // import { MatInputModule } from '@angular/material';
 import { FormlyModule } from '@ngx-formly/core';
-import { FormlyFieldInput } from '@ngx-formly/material/input'
+import { FormlyFieldInput } from '@ngx-formly/material/input';
 
 import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
@@ -13,7 +13,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AgGridModule } from 'ag-grid-angular';
 
 @NgModule({
-  declarations: [AppComponent, NxWelcomeComponent, PocComponent],
+  declarations: [
+    AppComponent,
+    NxWelcomeComponent,
+    PocComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -22,9 +26,9 @@ import { AgGridModule } from 'ag-grid-angular';
     FormlyModule.forRoot({
       types: [{ name: 'input', component: FormlyFieldInput }],
     }),
-    AgGridModule
+    AgGridModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

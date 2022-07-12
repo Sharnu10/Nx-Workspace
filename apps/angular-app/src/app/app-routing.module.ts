@@ -8,11 +8,12 @@ const routes: Routes = [
         component: PocComponent
     },
     {
-        path:'',
-        component: PocComponent
+        path: '',
+        loadChildren: () =>
+            import('./app-shell/app-shell.module').then((m) => m.AppShellModule),
     },
     {
-        path:'**',
+        path: '**',
         redirectTo: ''
     }
 ];
@@ -21,4 +22,4 @@ const routes: Routes = [
     imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
