@@ -3,24 +3,26 @@ import { RouterModule, Routes } from "@angular/router";
 import { PocComponent } from "../poc/poc.component";
 import { ShellComponent } from "./shell/shell.component";
 
-const routes: Routes = [
-    {
-        path:'',
-        component: ShellComponent
-    },
-    {
+const SUBROUTES: Routes = [
+  {
+    path: '',
+    component: ShellComponent,
+    children: [
+      {
         path: 'poc',
-        component: PocComponent
-    },
-    {
+        component: PocComponent,
+      },
+      {
         path: '**',
         redirectTo: '',
-        pathMatch: 'full'
-    }
-]
+        pathMatch: 'full',
+      },
+    ],
+  },
+];
 
 @NgModule({
-    imports: [RouterModule.forChild(routes)],
+    imports: [RouterModule.forChild(SUBROUTES)],
     exports: [RouterModule],
     providers: []
 })

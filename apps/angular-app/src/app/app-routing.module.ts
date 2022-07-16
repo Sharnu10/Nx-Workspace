@@ -1,12 +1,8 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { PocComponent } from "./poc/poc.component";
+// import { PocComponent } from "./poc/poc.component";
 
 const routes: Routes = [
-    {
-        path: 'poc',
-        component: PocComponent
-    },
     {
         path: '',
         loadChildren: () =>
