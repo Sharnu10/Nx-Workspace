@@ -10,12 +10,14 @@ import { NxWelcomeComponent } from './nx-welcome.component';
 import { PocComponent } from './poc/poc.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AgGridModule } from 'ag-grid-angular';
+import { AgGridComponent } from './ag-grid/ag-grid.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NxWelcomeComponent,
     PocComponent,
+    AgGridComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,7 @@ import { AgGridModule } from 'ag-grid-angular';
       types: [{ name: 'input', component: FormlyFieldInput }],
     }),
     AgGridModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
