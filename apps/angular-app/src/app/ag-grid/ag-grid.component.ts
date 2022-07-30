@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ColDef } from 'ag-grid-community/dist/lib/entities/colDef';
+import { HttpClient } from '@angular/common/http';
 
+export interface ITable {
+  make: string,
+  model: string,
+  price: number
+}
 @Component({
   selector: 'my-org-ag-grid',
   templateUrl: './ag-grid.component.html',
@@ -8,19 +14,22 @@ import { ColDef } from 'ag-grid-community/dist/lib/entities/colDef';
 })
 export class AgGridComponent implements OnInit {
 
-  rowData = [
-    { make: 'Toyota', model: 'Celica', price: 35000 },
-    { make: 'Ford', model: 'Mondeo', price: 32000 },
-    { make: 'Porsche', model: 'Boxster', price: 72000 }
-];
+  columnDefs: ColDef[] = [
+    { field: 'make' },
+    { field: 'model' },
+    { field: 'price' }
+  ];
+  rowData: ITable[] = [];
 
-columnDefs: ColDef[] = [
-  { field: 'make' },
-  { field: 'model' },
-  { field: 'price' }
-];
+  constructor(public http: HttpClient) { }
 
-  constructor() {}
+  ngOnInit() {
+    this.initialApi();
+  }
 
-  ngOnInit(): void {}
+  initialApi() {
+    this.http.get<ITable[]>('/api').subscribe((data: ITable[]) => {
+      this.rowData = data;
+    });
+  }
 }

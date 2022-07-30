@@ -7,6 +7,7 @@
     "api": "apps/api",
     "game": "apps/game",
     "game-e2e": "apps/game-e2e",
+    "nest-app": "apps/nest-app",
     "react-app": "apps/react-app",
     "react-app-e2e": "apps/react-app-e2e"
   }
