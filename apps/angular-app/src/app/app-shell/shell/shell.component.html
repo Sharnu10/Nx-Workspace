@@ -1,0 +1,28 @@
+<div class="main-layout">
+  <mat-toolbar-row>
+    <button
+      type="button"
+      aria-label="Toggle sidenav"
+      mat-raised-button
+      (click)="toggleSideBar()"
+      color="primary"
+    >
+      <mat-icon class="mat-icon" aria-label="Side nav toggle icon"
+        >menu</mat-icon
+      >
+    </button>
+  </mat-toolbar-row>
+  <main>
+    <mat-sidenav-container class="main-container">
+      <mat-sidenav #sidenav mode="side" opened [(opened)]="isSideBarOpen">
+        <mat-nav-list>
+          <a mat-list-item routerLink="/poc">Poc Component</a>
+          <a mat-list-item routerLink="/agGrid">Ag-Grid Component</a>
+        </mat-nav-list>
+      </mat-sidenav>
+      <mat-sidenav-content class="container--wrapper">
+        <router-outlet></router-outlet>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </main>
+</div>
