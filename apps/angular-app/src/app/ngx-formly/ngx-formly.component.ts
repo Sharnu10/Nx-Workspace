@@ -8,29 +8,40 @@ import { BaseFormlyComponent } from '../base-formly/base-formly.component';
   styleUrls: ['./ngx-formly.component.scss'],
 })
 export class NgxFormlyComponent 
-  extends BaseFormlyComponent<any> implements OnInit {
+  extends BaseFormlyComponent<any>  {
+    model1 ={};
 
     fields: FormlyFieldConfig[] = [
-    {
-      key: 'title',
-      type: 'input',
-      templateOptions: {
-        label: 'Email address',
-        placeholder: 'Enter email',
-        required: true
-      }
-    }
-  ];
+          {
+            key: 'inputField',
+            type: 'input',
+            templateOptions: {
+              label: 'Input address',
+              placeholder: 'Input address',
+              required: true
+            }
+          }
+        ];
+    fieldForm1: FormlyFieldConfig[] = [
+          {
+            key: 'emailField',
+            type: 'input',
+            templateOptions: {
+              type: 'email',
+              label: 'Email address',
+              placeholder: 'Enter email',
+              required: true
+            }
+          }
+        ];
 
   constructor() {
     super()
   }
 
-  ngOnInit(): void {
-    this.model = { email: 'email@mail.com' };
-  }
-
   onSubmit(model: any) {
     console.table(model);
+    this.form?.reset();
+    this.model = {};
   }
 }
