@@ -20,7 +20,7 @@ import { SharedModule } from './shared/shared.module';
     NxWelcomeComponent,
     PocComponent,
     AgGridComponent,
-    NgxFormlyComponent,
+    NgxFormlyComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +33,7 @@ import { SharedModule } from './shared/shared.module';
     AgGridModule,
     BrowserAnimationsModule,
 
-    SharedModule
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
