@@ -7,28 +7,4 @@ import { FormlyFieldConfig } from '@ngx-formly/core';
   templateUrl: './poc.component.html',
   styleUrls: ['./poc.component.scss'],
 })
-export class PocComponent {
-
-  form = new FormGroup({});
-  model = { email: 'email@mail.com' };
-  fields: FormlyFieldConfig[] = [
-    {
-      key: 'title',
-      type: 'input',
-      templateOptions: {
-        label: 'Email address',
-        placeholder: 'Enter email',
-        required: true
-      }
-    }
-  ];
-
-  onSubmit(model: any) {
-    alert(model)
-  }
-
- 
-
-
-
-}
+export class PocComponent {}
