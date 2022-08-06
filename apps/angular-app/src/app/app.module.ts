@@ -11,6 +11,8 @@ import { PocComponent } from './poc/poc.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AgGridModule } from 'ag-grid-angular';
 import { AgGridComponent } from './ag-grid/ag-grid.component';
+import { NgxFormlyComponent } from './ngx-formly/ngx-formly.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { AgGridComponent } from './ag-grid/ag-grid.component';
     NxWelcomeComponent,
     PocComponent,
     AgGridComponent,
+    NgxFormlyComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +32,8 @@ import { AgGridComponent } from './ag-grid/ag-grid.component';
     }),
     AgGridModule,
     BrowserAnimationsModule,
+
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent],
