@@ -13,6 +13,7 @@ import { AgGridModule } from 'ag-grid-angular';
 import { AgGridComponent } from './ag-grid/ag-grid.component';
 import { NgxFormlyComponent } from './ngx-formly/ngx-formly.component';
 import { SharedModule } from './shared/shared.module';
+import { MaterialModule } from './material/material-module';
 
 @NgModule({
   declarations: [
@@ -34,8 +35,9 @@ import { SharedModule } from './shared/shared.module';
     BrowserAnimationsModule,
 
     SharedModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
