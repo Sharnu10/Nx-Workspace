@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shell.component.scss'],
 })
 export class ShellComponent {
-  isSideBarOpen = false;
-  constructor() {}
+  isSideBarOpen = true;
+  constructor() { }
 
   toggleSideBar() {
     this.isSideBarOpen = !this.isSideBarOpen;
