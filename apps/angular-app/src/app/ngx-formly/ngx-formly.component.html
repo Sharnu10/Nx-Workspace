@@ -1,13 +1,8 @@
 <p>ngx-formly works!</p>
 <div>
   <form [formGroup]="form" (ngSubmit)="onSubmit(model)">
-    <formly-form
-      [form]="form"
-      [fields]="fields"
-      [model]="model"
-      [options]="options"
-    ></formly-form>
-    <button mat-raised-button type="submit" class="btn btn-default">
+    <formly-form [form]="form" [fields]="fields" [model]="model" [options]="options"></formly-form>
+    <button mat-raised-button color="primary" type="submit" class="btn btn-default">
       Submit
     </button>
   </form>
@@ -15,12 +10,7 @@
 
 <div class="form1">
   <form [formGroup]="form" (ngSubmit)="onSubmit(model)">
-    <formly-form
-      [form]="form"
-      [fields]="fieldForm1"
-      [model]="model"
-      [options]="options"
-    ></formly-form>
-    <button>Submit</button>
+    <formly-form [form]="form" [fields]="fieldForm1" [model]="model" [options]="options"></formly-form>
+    <button mat-raised-button color="primary">Submit</button>
   </form>
 </div>
