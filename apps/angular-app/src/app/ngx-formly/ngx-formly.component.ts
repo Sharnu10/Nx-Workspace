@@ -22,10 +22,12 @@ export class NgxFormlyComponent
       }
     }
   ];
+
   fieldForm1: FormlyFieldConfig[] = [
     {
       key: 'panelEmailField',
       wrappers: ['panel'],
+      className: 'flex-9',
       templateOptions: { label: 'Email section', title: 'title' },
       fieldGroup: [
         {
@@ -36,6 +38,24 @@ export class NgxFormlyComponent
             required: true
           }
         }
+      ]
+    },
+    {
+      key: 'date',
+      wrappers: ['panel'],
+      className: 'flex-3',
+      templateOptions: { label: 'section' },
+      fieldGroup: [
+        {
+          key: 'Datepicker',
+          type: 'datepicker',
+          templateOptions: {
+            label: 'Datepicker',
+            placeholder: 'Placeholder',
+            description: 'Description',
+            required: true,
+          },
+        },
       ]
     }
   ];
