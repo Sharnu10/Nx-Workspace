@@ -26,7 +26,7 @@ export class NgxFormlyComponent
     {
       key: 'panelEmailField',
       wrappers: ['panel'],
-      templateOptions: { label: 'Email section' },
+      templateOptions: { label: 'Email section', title: 'title' },
       fieldGroup: [
         {
           key: 'emailField',

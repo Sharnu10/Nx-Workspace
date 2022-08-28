@@ -3,6 +3,8 @@
 @import 'ag-grid-community/styles/ag-grid.css';
 @import 'ag-grid-community/styles/ag-theme-alpine.css';
 
+$space-1: 10px !default;
+
 html,
 body {
    height: 99%;
@@ -54,3 +56,8 @@ body {
    background: rgb(68, 68, 68);
    border-radius: 10px;
  }
+
+//  spacing attributes
+.m-l-1 {
+   margin-left: $space-1 !important;
+}

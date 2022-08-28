@@ -14,7 +14,6 @@ import { AgGridComponent } from './ag-grid/ag-grid.component';
 import { NgxFormlyComponent } from './ngx-formly/ngx-formly.component';
 import { SharedModule } from './shared/shared.module';
 import { MaterialModule } from './material/material-module';
-import { FormCoreModule } from './form-core/form-core.module';
 
 @NgModule({
   declarations: [
@@ -37,8 +36,6 @@ import { FormCoreModule } from './form-core/form-core.module';
 
     SharedModule,
     MaterialModule,
-
-    FormCoreModule
   ],
   providers: [],
   bootstrap: [AppComponent],

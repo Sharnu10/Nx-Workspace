@@ -1,8 +1,9 @@
 import { NgModule } from "@angular/core";
 import { BaseFormlyComponent } from "../base-formly/base-formly.component";
+import { FormCoreModule } from "../form-core/form-core.module";
 
 @NgModule({
-    imports: [],
+    imports: [FormCoreModule],
     exports: [BaseFormlyComponent],
     declarations: [BaseFormlyComponent]
 })
