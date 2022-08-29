@@ -1,22 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/indigo-pink.css"; 
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import 'ag-grid-community/styles/ag-grid.css';
 @import 'ag-grid-community/styles/ag-theme-alpine.css';
 
-html, body {
-   height: 100%;
-   width: 100%;
-   padding: 1px;
-   margin: 1px;
+$space-1: 10px !default;
+
+html,
+body {
+   height: 99%;
+   width: 99%;
    box-sizing: border-box;
    -webkit-overflow-scrolling: touch;
 }
 
 .display-flex-center {
    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: space-evenly;
+   flex-direction: column;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   align-content: space-evenly;
+}
+
+// ag-grid-angular
+.ag-theme-alpine {
+   height: calc(100vh - 20rem);
+   width: auto;
+}
+
+// custom-scrollbbar
+::-webkit-scrollbar {
+   width: 6px;
+ }
+ 
+::-webkit-scrollbar:horizontal {
+   width: 6px;
+ }
+
+::-webkit-scrollbar-track {
+   background: rgb(179, 177, 177);
+   border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+   background: rgb(136, 136, 136);
+   border-radius: 10px;
+ }
+
+::-webkit-scrollbar-thumb:hover {
+   background: rgb(100, 100, 100);
+   border-radius: 10px;
+ }
+
+::-webkit-scrollbar-thumb:active {
+   background: rgb(68, 68, 68);
+   border-radius: 10px;
+ }
+
+//  spacing attributes
+.m-l-1 {
+   margin-left: $space-1 !important;
 }
