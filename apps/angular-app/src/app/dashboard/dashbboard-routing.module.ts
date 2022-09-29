@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ShellComponent } from './shell/shell.component';
+import { AgGridComponent } from '../ag-grid/ag-grid.component';
+import { PocComponent } from '../poc/poc.component';
 
 const SUBROUTES: Routes = [
   {
-    path: '',
-    component: ShellComponent,
-    loadChildren: () =>
-      import('../dashboard/dashboard.module').then((m) => m.DashboardModule),
+    path: 'poc',
+    component: PocComponent,
+  },
+  {
+    path: 'agGrid',
+    component: AgGridComponent,
   },
   {
     path: '**',
@@ -15,10 +18,8 @@ const SUBROUTES: Routes = [
     pathMatch: 'full',
   },
 ];
-
 @NgModule({
   imports: [RouterModule.forChild(SUBROUTES)],
   exports: [RouterModule],
-  providers: [],
 })
-export class ShellRoutingModule {}
+export class DashbboardRoutingModule {}

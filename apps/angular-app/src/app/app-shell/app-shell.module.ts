@@ -4,8 +4,7 @@ import { ShellComponent } from './shell/shell.component';
 import { ShellRoutingModule } from './app-shell-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from '../material/material-module';
-import { FormlyMaterialModule } from "@ngx-formly/material";
-
+import { FormlyMaterialModule } from '@ngx-formly/material';
 
 @NgModule({
   declarations: [ShellComponent],
@@ -14,7 +13,7 @@ import { FormlyMaterialModule } from "@ngx-formly/material";
     ShellRoutingModule,
     HttpClientModule,
     MaterialModule,
-    FormlyMaterialModule
+    FormlyMaterialModule,
   ],
 })
-export class AppShellModule { }
+export class AppShellModule {}
