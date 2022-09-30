@@ -1,10 +1,11 @@
-import { NgModule } from "@angular/core";
-import { BaseFormlyComponent } from "../base-formly/base-formly.component";
-import { FormCoreModule } from "../form-core/form-core.module";
+import { NgModule } from '@angular/core';
+import { FormlyModule } from '@ngx-formly/core';
+import { BaseFormlyComponent } from '../base-formly/base-formly.component';
+import { FormCoreModule } from '../form-core/form-core.module';
 
 @NgModule({
-    imports: [FormCoreModule],
-    exports: [BaseFormlyComponent],
-    declarations: [BaseFormlyComponent]
+  imports: [FormCoreModule, FormlyModule],
+  exports: [BaseFormlyComponent, FormlyModule],
+  declarations: [BaseFormlyComponent],
 })
 export class SharedModule {}

@@ -21,16 +21,16 @@ import { MaterialModule } from './material/material-module';
     NxWelcomeComponent,
     PocComponent,
     AgGridComponent,
-    NgxFormlyComponent
+    NgxFormlyComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    FormlyModule.forRoot({
-      types: [{ name: 'input', component: FormlyFieldInput }],
-    }),
+    // FormlyModule.forRoot({
+    //   types: [{ name: 'input', component: FormlyFieldInput }],
+    // }),
     AgGridModule,
     BrowserAnimationsModule,
 
@@ -40,4 +40,4 @@ import { MaterialModule } from './material/material-module';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
