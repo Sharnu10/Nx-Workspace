@@ -5,6 +5,6 @@ export const FormlyTypesConfig = [
   {
     name: FieldTypes.InputText,
     component: InputFieldComponent,
-    wrappers: ['panel'],
+    wrappers: ['form-field'],
   },
 ];
